@@ -1,0 +1,4 @@
+# Lottery ticket hypothesis parameters
+n_runs: 3 # Number of training runs for lottery ticker algorithm
+n_rounds: 2 # Number of rounds for iterative pruning to increate percentage
+

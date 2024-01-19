@@ -1,0 +1,7 @@
+_target_: models.asc_3c.CandidateCNN
+
+
+n_chan: 2
+n_class: 3
+
+quant: False

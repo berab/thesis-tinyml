@@ -1,0 +1,86 @@
+_target_: main.Main
+
+## Output dir
+hydra:
+  run:
+    dir: outputs/baseline/SpeechCommands/${apply}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/baseline/SpeechCommands/${apply}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+# Working directory
+wdir: ${hydra:runtime.cwd}
+# State dict. dir. for test/pruning/quantization
+model_dir: pretrained_models/scvgg19-acc95.pt
+tmodel_dir: pretrained_models/scvgg19-acc95.pt
+
+defaults:
+  # Main
+  - _self_
+  - hpc_rtx3080
+  - /hydra/callbacks:
+    - my_callback
+
+  # Training
+  - model: vgg19 
+  - optim: sgd-steplr
+  - loader: sc
+  - feature: mfcc
+  - monitor: base
+
+  # Knowledge distillation
+  - tmodel: none
+
+  # Other applications
+  - nemo: vgg19
+
+# Training parameters
+n_epochs: 50 
+
+# Applications: train, test, itr-prune
+# lottery, prune
+# TODO: iterative lottery ticket
+apply: train
+
+# If you want to do test before quantization or training
+test: False
+
+# Backend
+target:
+    device: 'cuda'
+    ids: [0]
+
+# Seed for RNGs in pytorch, numpy and python.
+seed: 42
+
+# Augmentations
+# mixup, Set 0 to disable
+mixup_alpha: 0
+
+#Specaug., Set mask=0 to disable
+mask: 0
+
+# Temporal-shift, Set 0 to disable
+shift: 0
+
+# pruning
+# methods: global, layerwise
+p_method: global
+# Iterative pruning/lottery ticket hyp.
+p: 95
+n_rounds: 5
+
+# Needed for linear scheduler
+one: 1
+
+# Nvidia quant.
+q_method: max
+
+# Early-stopping patience
+patience: 50
+
+# save the models or not
+save: True
+
+# Knowledge distillation
+kd_alpha: 0.5
+

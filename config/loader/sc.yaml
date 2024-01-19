@@ -1,0 +1,8 @@
+_target_: loader.scloader.SCLoader
+
+dataset_dir: ${wdir}/datasets/SpeechCommands/speech_commands_v0.02
+
+batch_size: 96
+n_workers: 8
+data:
+        duration: 1

@@ -1,0 +1,10 @@
+_target_: torchaudio.transforms.MFCC
+
+n_mfcc: 12
+melkwargs:
+        n_fft: 2048
+        hop_length: 512
+        mel_scale: slaney
+        norm: slaney
+        pad_mode: constant
+        f_max: 8000

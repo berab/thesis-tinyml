@@ -1,0 +1,95 @@
+# Test the model before quantization
+test: True
+verbose: False
+
+# Input shape
+F:  256
+T:  334
+
+## model bits
+model_bits: 
+    conv1:
+        W_bits: 7
+    block1_1__freq_dw_conv:
+        W_bits: 7
+    block1_1__temp_dw_conv:
+        W_bits: 7
+    block1_1__relu:
+        x_bits: 7
+    block1_1__conv1x1_1:
+        W_bits: 7
+    block1_1__conv1x1_2:
+        W_bits: 7
+    block1_2__freq_dw_conv:
+        W_bits: 7
+    block1_2__temp_dw_conv:
+        W_bits: 7
+    block1_2__relu:
+        x_bits: 7
+    block1_2__conv1x1:
+        W_bits: 7
+    block2_1__freq_dw_conv:
+        W_bits: 7
+    block2_1__temp_dw_conv:
+        W_bits: 7
+    block2_1__relu:
+        x_bits: 7
+    block2_1__conv1x1_1:
+        W_bits: 7
+    block2_1__conv1x1_2:
+        W_bits: 7
+    block2_2__freq_dw_conv:
+        W_bits: 7
+    block2_2__temp_dw_conv:
+        W_bits: 7
+    block2_2__relu:
+        x_bits: 7
+    block2_2__conv1x1:
+        W_bits: 7
+    block3_1__freq_dw_conv:
+        W_bits: 7
+    block3_1__temp_dw_conv:
+        W_bits: 7
+    block3_1__relu:
+        x_bits: 7
+    block3_1__conv1x1_1:
+        W_bits: 7
+    block3_1__conv1x1_2:
+        W_bits: 7
+    block3_2__freq_dw_conv:
+        W_bits: 7
+    block3_2__temp_dw_conv:
+        W_bits: 7
+    block3_2__relu:
+        x_bits: 7
+    block3_2__conv1x1:
+        W_bits: 7
+    block4_1__freq_dw_conv:
+        W_bits: 7
+    block4_1__temp_dw_conv:
+        W_bits: 7
+    block4_1__relu:
+        x_bits: 7
+    block4_1__conv1x1_1:
+        W_bits: 7
+    block4_1__conv1x1_2:
+        W_bits: 7
+    block4_2__freq_dw_conv:
+        W_bits: 7
+    block4_2__temp_dw_conv:
+        W_bits: 7
+    block4_2__relu:
+        x_bits: 7
+    block4_2__conv1x1:
+        W_bits: 7
+    block4_3__freq_dw_conv:
+        W_bits: 7
+    block4_3__temp_dw_conv:
+        W_bits: 7
+    block4_3__relu:
+        x_bits: 7
+    block4_3__conv1x1:
+        W_bits: 7
+    conv2:
+        W_bits: 7
+

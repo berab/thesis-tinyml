@@ -1,0 +1,94 @@
+test: True
+verbose: False
+
+# Input shape
+F:  256
+T:  334
+
+## model bits
+model_bits: 
+    conv1:
+        W_bits: 4
+    block1_1.freq_dw_conv:
+        W_bits: 4
+    block1_1.temp_dw_conv:
+        W_bits: 4
+    block1_1.relu:
+        x_bits: 4
+    block1_1.conv1x1_1:
+        W_bits: 4
+    block1_1.conv1x1_2:
+        W_bits: 4
+    block1_2.freq_dw_conv:
+        W_bits: 4
+    block1_2.temp_dw_conv:
+        W_bits: 4
+    block1_2.relu:
+        x_bits: 4
+    block1_2.conv1x1:
+        W_bits: 4
+    block2_1.freq_dw_conv:
+        W_bits: 4
+    block2_1.temp_dw_conv:
+        W_bits: 4
+    block2_1.relu:
+        x_bits: 4
+    block2_1.conv1x1_1:
+        W_bits: 4
+    block2_1.conv1x1_2:
+        W_bits: 4
+    block2_2.freq_dw_conv:
+        W_bits: 4
+    block2_2.temp_dw_conv:
+        W_bits: 4
+    block2_2.relu:
+        x_bits: 4
+    block2_2.conv1x1:
+        W_bits: 4
+    block3_1.freq_dw_conv:
+        W_bits: 4
+    block3_1.temp_dw_conv:
+        W_bits: 4
+    block3_1.relu:
+        x_bits: 4
+    block3_1.conv1x1_1:
+        W_bits: 4
+    block3_1.conv1x1_2:
+        W_bits: 4
+    block3_2.freq_dw_conv:
+        W_bits: 4
+    block3_2.temp_dw_conv:
+        W_bits: 4
+    block3_2.relu:
+        x_bits: 4
+    block3_2.conv1x1:
+        W_bits: 4
+    block4_1.freq_dw_conv:
+        W_bits: 4
+    block4_1.temp_dw_conv:
+        W_bits: 4
+    block4_1.relu:
+        x_bits: 4
+    block4_1.conv1x1_1:
+        W_bits: 4
+    block4_1.conv1x1_2:
+        W_bits: 4
+    block4_2.freq_dw_conv:
+        W_bits: 4
+    block4_2.temp_dw_conv:
+        W_bits: 4
+    block4_2.relu:
+        x_bits: 4
+    block4_2.conv1x1:
+        W_bits: 4
+    block4_3.freq_dw_conv:
+        W_bits: 4
+    block4_3.temp_dw_conv:
+        W_bits: 4
+    block4_3.relu:
+        x_bits: 4
+    block4_3.conv1x1:
+        W_bits: 4
+    conv2:
+        W_bits: 4
+

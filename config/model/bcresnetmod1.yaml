@@ -1,0 +1,6 @@
+_target_: models.asc.BCResNetMod1
+
+n_class: 10
+n_chan: 1
+
+quant: False

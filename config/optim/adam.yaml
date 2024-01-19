@@ -1,0 +1,13 @@
+_target_: utils.wrapper.Optim
+
+optim:
+  class: Adam
+  lr: 0.001
+
+warmup: 0
+
+scheduler:
+        class: StepLR 
+        step_size: 5
+        gamma: 0.5
+

@@ -1,0 +1,17 @@
+_target_: utils.wrapper.Optim
+
+optim:
+  class: SGD
+  lr: 0.06
+  weight_decay: 0.001
+  momentum: 0.9
+
+warmup:
+    class: LinearLR
+    start_factor: 0.00001 # initial_lr <- optim.lr*start_factor
+    total_iters: 1095
+
+scheduler:
+  class: CosineAnnealingLR
+  T_max: 20805 # n_epochs/10
+

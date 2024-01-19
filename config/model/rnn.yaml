@@ -1,0 +1,9 @@
+_target_: models.sc.RNN
+
+input_size: 12
+hidden_size: 64
+num_layers: 3
+num_classes: 35
+device: ${target.device}
+
+quant: False

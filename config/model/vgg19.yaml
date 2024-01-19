@@ -1,0 +1,12 @@
+_target_: models.sc.VGG
+
+# Preprocessing
+ver: E
+n_class: 35 
+n_chan: 1
+
+# nemo, brevitas, or nvidia
+quant: False
+n_bits:
+        x: 8
+        W: 8

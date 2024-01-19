@@ -1,0 +1,84 @@
+verbose: False
+
+# Input shape
+n_chan: 1
+F:  32
+T:  32
+
+# model bits
+model_bits: 
+        features__0: 
+                W_bits: 4
+        features__2: 
+                x_bits: 4
+        features__3: 
+                W_bits: 4
+        features__5: 
+                x_bits: 4
+        features__7: 
+                W_bits: 4
+        features__9: 
+                x_bits: 4
+        features__10: 
+                W_bits: 4
+        features__12: 
+                x_bits: 4
+        features__14: 
+                W_bits: 4
+        features__16: 
+                x_bits: 4
+        features__17: 
+                W_bits: 4
+        features__19: 
+                x_bits: 4
+        features__20: 
+                W_bits: 4
+        features__22: 
+                x_bits: 4
+        features__23: 
+                W_bits: 4
+        features__25: 
+                x_bits: 4
+        features__27: 
+                W_bits: 4
+        features__29: 
+                x_bits: 4
+        features__30: 
+                W_bits: 4
+        features__32: 
+                x_bits: 4
+        features__33: 
+                W_bits: 4
+        features__35: 
+                x_bits: 4
+        features__36: 
+                W_bits: 4
+        features__38: 
+                x_bits: 4
+        features__40: 
+                W_bits: 4
+        features__42: 
+                x_bits: 4
+        features__43: 
+                W_bits: 4
+        features__45: 
+                x_bits: 4
+        features__46: 
+                W_bits: 4
+        features__48: 
+                x_bits: 4
+        features__49: 
+                W_bits: 4
+        features__51: 
+                x_bits: 4
+        classifier__0: 
+                W_bits: 4
+        classifier__1: 
+                x_bits: 4
+        classifier__3: 
+                W_bits: 4
+        classifier__4: 
+                x_bits: 4
+        classifier__6: 
+                W_bits: 4
+

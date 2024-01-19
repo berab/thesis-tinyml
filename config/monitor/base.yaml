@@ -1,0 +1,14 @@
+_target_: utils.monitor.Monitor
+scores:
+    # Score method from torchmetrics module
+    methods: ['F1Score', 'AveragePrecision'
+              ,'CohenKappa', 'Recall'
+              ,'MatthewsCorrCoef', 'AUROC']
+              
+
+    # Arguments for each method (if needed)
+    kwargs: [{}, {}, {}, {}, {}, {}]
+
+# Handle special scores like ROC etc.
+n_class: ${model.n_class}
+device: ${target.device}

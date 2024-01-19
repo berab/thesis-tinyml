@@ -1,0 +1,10 @@
+_target_: loader.dcaseloader.DCASELoader
+
+dataset_dir: ${wdir}/datasets/dcase20-3class
+
+batch_size: 8
+n_workers: 8
+data:
+        sr: 48000
+        resample_rate: 48000
+        duration: 10

@@ -1,0 +1,16 @@
+_target_: utils.audio_proc.LogMel
+
+# MelSpec
+sample_rate: 16000
+n_fft: 2048
+hop_length: 480
+n_mels: 256
+f_max: 8000
+center: True
+pad_mode: constant
+mel_scale: slaney
+window: hamming
+
+# ResNorm (<0 to disable)
+alpha: -1
+

@@ -1,0 +1,3 @@
+_target_: models.nemo_model.BCResNetMod8
+
+data: ${data}
