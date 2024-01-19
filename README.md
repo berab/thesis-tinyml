@@ -1,9 +1,5 @@
 # Multi-objective optimization of Audio Processing DNNs on Embedded Hardware
 
-## Contact:
-- beran.kilic@fau.de
-- beran.kilic@gmail.com
-
 ## Description:
 As part of this master thesis, the following investigations need to be carried out. 
 - Get familiar with the state-of-the-art models for the two audio process- ing applications. 
